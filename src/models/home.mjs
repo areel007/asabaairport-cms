@@ -82,36 +82,5 @@ const whatWeDoSchema = new Schema({
 
 const WhatWeDo = model("WhatWeDo", whatWeDoSchema);
 
-//passengers
-// passengers hero
-const passengersHomeHeroSchema = new Schema({
-  heroOne: {
-    text: String,
-    image: {
-      type: String,
-      default: "",
-    },
-  },
-  heroTwo: {
-    text: String,
-    image: {
-      type: String,
-      default: "",
-    },
-  },
-  heroThree: {
-    text: String,
-    image: {
-      type: String,
-      default: "",
-    },
-  },
-});
-
-const PassengersHomeHero = model(
-  "PassengersHomeHero",
-  passengersHomeHeroSchema
-);
-
 // export models
-export default { CorporateHomeHero, PassengersHomeHero, OurStory, WhatWeDo };
+export default { CorporateHomeHero, OurStory, WhatWeDo };
