@@ -97,7 +97,7 @@ export const getTravelExperience = async (req, res) => {
 
 export const updateTravelExperience = async (req, res) => {
   const { id } = req.params;
-  const { highlight, chillOut, wifi, covid } = req.body;
+  const { highlight, chillOut, wifi, covid, image } = req.body;
   try {
     const travelExperience = await TravelExperience.findByIdAndUpdate(
       id,
@@ -106,6 +106,7 @@ export const updateTravelExperience = async (req, res) => {
         chillOut,
         wifi,
         covid,
+        image,
       },
       { new: true }
     );
