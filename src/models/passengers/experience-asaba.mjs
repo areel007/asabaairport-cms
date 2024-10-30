@@ -19,6 +19,6 @@ const experienceAsabaSchema = new Schema({
   },
 });
 
-const ExperienceAsaba = model("ExperienceAsabaPage", experienceAsabaSchema);
+const ExperienceAsabaPage = model("ExperienceAsabaPage", experienceAsabaSchema);
 
-export default ExperienceAsaba;
+export default ExperienceAsabaPage;
