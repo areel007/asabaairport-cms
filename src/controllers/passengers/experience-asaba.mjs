@@ -1,9 +1,9 @@
-import ExperienceAsaba from "../../models/passengers/experience-asaba.mjs";
+import {ExperienceAsabaPage} from "../../models/passengers/experience-asaba.mjs";
 
 export const newExperienceAsaba = async (req, res) => {
   const { image, title, description, content } = req.body;
   try {
-    const experienceAsaba = new ExperienceAsaba({
+    const experienceAsaba = new ExperienceAsabaPage({
       image,
       title,
       description,
@@ -21,7 +21,7 @@ export const newExperienceAsaba = async (req, res) => {
 export const getExperienceAsaba = async (req, res) => {
   const { id } = req.params;
   try {
-    const experienceAsaba = await ExperienceAsaba.findById(id);
+    const experienceAsaba = await ExperienceAsabaPage.findById(id);
     if (!experienceAsaba) {
       return res.status(404).json({ message: "Experience not found" });
     }
@@ -35,7 +35,7 @@ export const updateExperienceAsaba = async (req, res) => {
   const { id } = req.params;
   const { image, title, description, content } = req.body;
   try {
-    const experienceAsaba = await ExperienceAsaba.findByIdAndUpdate(
+    const experienceAsaba = await ExperienceAsabaPage.findByIdAndUpdate(
       id,
       {
         image,

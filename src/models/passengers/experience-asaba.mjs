@@ -21,4 +21,4 @@ const experienceAsabaSchema = new Schema({
 
 const ExperienceAsabaPage = model("ExperienceAsabaPage", experienceAsabaSchema);
 
-export default ExperienceAsabaPage;
+export { ExperienceAsabaPage };
